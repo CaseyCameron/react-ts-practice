@@ -1,11 +1,13 @@
 import React from 'react'
-import Todo from '../models/todo'
 import Item from './Item';
+import Todo from '../models/todo'
 
 const Todos: React.FC<{ items: Todo[] }> = ({ items }) => {
   return (
     <ul>
-      {items.map(({ text }) => <Item todo={text}/>)}
+      {items.map(({ id, text }) => (
+        <Item text={text} id={id}/>
+      ))}
     </ul>
   )
 }

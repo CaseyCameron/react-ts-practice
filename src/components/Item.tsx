@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Item: React.FC<{ todo: string }> = ({ todo }) => {
+const Item: React.FC<{ text: string; id: string }> = ({ text, id }) => {
   return (
-    <li key={todo}>{todo}</li>
+    <li key={id}>{text}</li>
   )
 }
 
