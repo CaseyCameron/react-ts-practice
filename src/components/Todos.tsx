@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from './Item';
+import Item from './NewTodo';
 import Todo from '../models/todo'
 
 const Todos: React.FC<{ items: Todo[] }> = ({ items }) => {

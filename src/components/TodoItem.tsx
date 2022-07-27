@@ -1,4 +1,4 @@
-const NewItem = () => {
+const TodoItem = () => {
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -12,4 +12,4 @@ const NewItem = () => {
   </form>
 }
 
-export default NewItem
+export default TodoItem
