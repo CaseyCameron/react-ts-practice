@@ -1,14 +1,19 @@
 import React from 'react'
-import Item from './TodoItem';
+import TodoItem from './TodoItem';
 import Todo from '../models/todo'
+import classes from './Todos.module.css'
 
-const Todos: React.FC<{ items: Todo[] }> = ({ items }) => {
+const Todos: React.FC<{ items: Todo[], removeTodo: (id: string) => void }> = ({ items, removeTodo }) => {
   return (
-    <ul>
+    <ul className={classes.todos}>
       {items.map(({ id, text }) => (
-        <Item text={text} id={id}/>
+        <TodoItem 
+          key={id}
+          text={text}
+          removeTodo={removeTodo.bind(null, id)}
+        />
       ))}
-    </ul>
+    </ul> 
   )
 }
 
