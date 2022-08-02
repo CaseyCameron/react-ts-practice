@@ -1,15 +1,9 @@
-const TodoItem = () => {
-  const submitHandler = (e: React.FormEvent) => {
-    e.preventDefault()
+import React from 'react'
 
-    
-  }
-
-  return <form onSubmit={submitHandler}>
-    <label htmlFor="text">Todo text</label>
-    <input id="text" type="text" />
-    <button>Add Todo</button>
-  </form>
+const TodoItem: React.FC<{ text: string; id: string }> = ({ text, id }) => {
+  return (
+    <li key={id}>{text}</li>
+  )
 }
 
 export default TodoItem
